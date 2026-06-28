@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.Media.Control;
@@ -47,7 +48,7 @@ namespace WindowsMediaController
         /// A dictionary of the current <c>(<see cref="string"/> MediaSessionIds, <see cref="MediaSession"/> MediaSessionInstance)</c>
         /// </summary>
         public IReadOnlyDictionary<string, MediaSession> CurrentMediaSessions => _CurrentMediaSessions;
-        private readonly Dictionary<string, MediaSession> _CurrentMediaSessions = new Dictionary<string, MediaSession>();
+        private readonly ConcurrentDictionary<string, MediaSession> _CurrentMediaSessions = new ConcurrentDictionary<string, MediaSession>();
 
         /// <summary>
         /// Whether the <see cref="MediaSession"/> has started.
@@ -224,7 +225,7 @@ namespace WindowsMediaController
         {
             if (_CurrentMediaSessions.ContainsKey(mediaSession.Id))
             {
-                _CurrentMediaSessions.Remove(mediaSession.Id);
+                _CurrentMediaSessions.TryRemove(mediaSession.Id, out var _);
 
                 try
                 {
