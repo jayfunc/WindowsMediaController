@@ -1,5 +1,16 @@
-# Windows Media Controller
-[![NuGet](https://img.shields.io/nuget/vpre/Dubya.WindowsMediaController.svg)](https://nuget.org/packages/Dubya.WindowsMediaController)
+# Windows Media Controller (jayfunc Patched)
+
+[![NuGet](https://img.shields.io/nuget/vpre/Dubya.WindowsMediaController.Jayfunc.svg)](https://nuget.org/packages/Dubya.WindowsMediaController.Jayfunc)
+
+> ⚠️ **Important Notice / 声明**
+> 
+> This repository and its corresponding NuGet package (`Dubya.WindowsMediaController.Jayfunc`) is a **personal patched fork** of the original [Dubya.WindowsMediaController](https://github.com/DubyaDude/WindowsMediaController) developed by **DubyaDude**.
+> 
+> We fully respect the original author's copyright and license. This version contains minor personal modifications/fixes and is published under the terms of the original open-source license. For the official, fully-supported version, please refer to the original repository.
+> 
+> 本仓库及对应的 NuGet 包仅作为**个人修改与修复版本**。我们完全尊重并遵守原作者 **DubyaDude** 的版权与开源协议。此版本仅包含个人的几行微调，如需官方原版支持，请前往原作者仓库。
+
+---
 
 This repository provides a wrapper for developers to more easily get information from and interact with the Windows 10/11 OS media interface (Also referred to Windows System Media Transport Controls (SMTC)). 
 
